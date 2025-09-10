@@ -1,5 +1,6 @@
-#include <substrate.h>
-#include <objc/runtime.h>
+#import <substrate.h>
+#import <objc/runtime.h>
+#import <Foundation/Foundation.h>
 
 // This class will be loaded at runtime
 static Class EgernStoreClass = nil;
@@ -26,9 +27,8 @@ static Class EgernStoreClass = nil;
 		Ivar ivar = class_getInstanceVariable([self class], "_isProUnlocked");
 		if (ivar) {
 			NSLog(@"[EgernProUnlock] Found _isProUnlocked iVar, setting to true");
-			BOOL yes = YES;
 			// Set the iVar to true
-			object_setIvar(self, ivar, @(YES));
+			object_setIvar(self, ivar, [NSNumber numberWithBool:YES]);
 		}
 	}
 	

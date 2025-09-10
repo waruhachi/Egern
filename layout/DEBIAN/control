@@ -1,0 +1,9 @@
+Package: moe.waru.egern
+Name: Egern
+Version: 1.0.0
+Architecture: iphoneos-arm
+Description: Egern Pro
+Maintainer: waruhachi
+Author: waruhachi
+Section: Tweaks
+Depends: mobilesubstrate
